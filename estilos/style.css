@@ -1,0 +1,35 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+td, th {
+    border: 1px solid #000000;
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+
+
+}
+
+th.linha {
+    background-color: #808080;
+    color: #ffffff;
+
+
+}
+
+
+th {
+    background-color: #aaaaaa;
+
+
+}
+
+
+table {
+    border-collapse: collapse;
+
+
+}

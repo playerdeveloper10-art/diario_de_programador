@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+
+
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+}
+
+
+:root {
+    --font1: 'Orbitron',arial,helvetica,sans-serif;
+
+
+}
+
+
+body {
+    margin: 0px;
+    background-color: #0F0F0F;
+}
+
+
+main {
+    padding: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
+p {
+    font-size: 0.9em;
+
+}
+
+
+article#principal {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #000000;
+    background-color: #ffffff;
+
+}
+
+
+article#principal p,h2 {
+    padding: 10px;
+
+}
+
+
+#Definições_com_excecções {
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+
+#especial {
+    font-weight: 900;
+    font-size: 1.2em;
+
+
+}
+
+#especial > a {
+    font-weight: 900;
+    font-size: 1.2em;
+    color: #0000ff;
+    text-decoration: underline;
+
+
+}
+
+
+td, th {
+    border: 1px solid #000000;
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    background-color: #ffffff;
+
+
+}
+
+
+.total {
+    background-color: #808080;
+
+
+
+}
+
+th.linha {
+    background-color: #808080;
+    color: #ffffff;
+
+
+}
+
+
+th {
+    background-color: #0000ff;
+    color: #ffffff;
+
+}
+
+
+.row {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 900;
+
+}
+
+
+table {
+    border-collapse: collapse;
+
+
+}
+
+
+h1#principal {
+    color: #ffffff;
+    text-align: center;
+    font-family: var(--font1);
+    font-size: 2.5em;
+}
+
+
+header {
+    margin: 0px;
+    background-color: #0000ff;
+    padding: 10px;
+    width: 100vw;
+
+}
+
+
+#box_title {
+    border: 1px solid #000000;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0px;
+    padding: 5px;
+    background-color: #00ffff;
+}
+
+
+iframe {
+    margin: 10px;
+    border: 5px solid #000000;
+
+}
+
+
+.total-row > td {
+    background-color: #aaaaaa;
+
+
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        
+        .tabela-vps {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 25px 0;
+            font-size: 14px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #000000;
+        }
+        .tabela-vps thead tr {
+            background-color: #673ab7;
+            color: #ffffff;
+            text-align: left;
+        }
+        .tabela-vps th, .tabela-vps td {
+            padding: 12px 15px;
+            border: 1px solid #eeeeee;
+            border: 1px solid #000000;
+        }
+        .tabela-vps tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .tabela-vps tbody tr:hover {
+            background-color: #f1eefb;
+        }
+        .destaque-vps {
+            font-weight: bold;
+            color: #673ab7;
+        }
+
+        /* Estrutura da Tabela */
+        .el-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Cabeçalho */
+        .el-table-head {
+            background-color: #111111;
+        }
+
+        .el-table-header-cell {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 18px 24px;
+            text-align: left;
+        }
+
+        /* Linhas e Células */
+        .el-table-row {
+            transition: background-color 0.2s ease;
+        }
+
+        .el-table-row:hover {
+            background-color: #fcfcfc;
+        }
+
+        .el-table-cell {
+            padding: 20px 24px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #333333;
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        .el-table-row:last-child .el-table-cell {
+            border-bottom: none;
+        }
+
+        /* Classes Utilitárias de Conteúdo */
+        .el-tier-name {
+            font-weight: 700;
+            color: #5d5dff;
+            font-size: 16px;
+        }
+
+        .el-price-value {
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+
+        .el-chars-count {
+            font-family: 'Courier New', Courier, monospace;
+            background: #f1f1ff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .el-feature-list {
+            color: #666;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        #escolhido {
+            color: #0000ff;
+
+
+        }
+
+        td, th {
+            border: 1px solid #000000;
+
+        }
+
+
+        .td, .th {
+            border: 1px solid #000000;
+            padding: 10px;
+            width: 500px;
+
+        }
+
+        .table {
+            border-collapse: collapse;
+        }
+
+
+        .thead {
+            background-color: #505050;
+            color: #ffffff;
+            box-shadow: 1px 1px 1px #000000;
+        }
+
+
+
+        .th-foot, .td-foot {
+            border: 1px solid #000000;
+            padding: 10px;
+            background-color: #aaaaaa;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Custo inicial do projeto: </h1>
+    </header>
+    
+    
+    
+    <main>
+        <article>
+            <p>Primeiro temos que definir quais são os custos iniciais do projeto</p>
+            <p>Primeiro precisamos definir o preço 3 coisas, usando api: </p>
+            <ol>
+                <li>Hospedagem - n8n</li>
+                <li>IA que faz voz</li>
+                <li>IA que faz videos ou parte grafica do video</li>
+                <li>Roteiro (chatgpt)</li>
+                <li>IA para gerar thumbnail (chatgpt/dall-e)</li>
+            </ol>
+        
+        
+            <h2>1- Preço da hostinger (hostinger - n8n)</h2>
+            <table class="tabela-vps">
+                <thead>
+                    <tr>
+                        <th>Plano</th>
+                        <th>vCPU (Núcleos)</th>
+                        <th>Memória RAM</th>
+                        <th>Armazenamento NVMe</th>
+                        <th>Largura de Banda</th>
+                        <th>Uso Recomendado (n8n)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>KVM 1</strong></td>
+                        <td>1 Core</td>
+                        <td>4 GB</td>
+                        <td>50 GB</td>
+                        <td>4 TB</td>
+                        <td>Automia simples e poucos fluxos.</td>
+                    </tr>
+                    <tr>
+                        <td>KVM 2</td>
+                        <td>2 Cores</td>
+                        <td>8 GB</td>
+                        <td>100 GB</td>
+                        <td>8 TB</td>
+                        <td><strong>Melhor Custo-Benefício</strong> para n8n estável.</td>
+                    </tr>
+                    <tr>
+                        <td class="destaque-vps"><strong>KVM 4</strong></td>
+                        <td>4 Cores</td>
+                        <td>16 GB</td>
+                        <td>200 GB</td>
+                        <td>16 TB</td>
+                        <td>Fluxos pesados com IA e processamento de dados. (Plano ideal para o meu caso)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>KVM 8</strong></td>
+                        <td>8 Cores</td>
+                        <td>32 GB</td>
+                        <td>400 GB</td>
+                        <td>32 TB</td>
+                        <td>Escala empresarial e múltiplas instâncias Docker.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="resumo">Resumo: </p>
+            <ul>
+                <li>Plano escolhido: KVM 2 ou KVM 4</li>
+                <li>Valor: R$39,99 ou 54,99</li>
+            </ul>
+            <h2>2- IA que faz voz (elevenlabs)</h2>
+            <table class="el-table">
+                <thead class="el-table-head">
+                    <tr>
+                        <th class="el-table-header-cell">Plano</th>
+                        <th class="el-table-header-cell">Preço Mensal</th>
+                        <th class="el-table-header-cell">Caracteres</th>
+                        <th class="el-table-header-cell">Destaques</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="el-table-row">
+                        <td class="el-table-cell"><span class="el-tier-name">Free</span></td>
+                        <td class="el-table-cell"><span class="el-price-value">$0</span></td>
+                        <td class="el-table-cell"><span class="el-chars-count">10.000</span></td>
+                        <td class="el-table-cell"><span class="el-feature-list">Uso não comercial, 3 vozes, atribuição necessária.</span></td>
+                    </tr>
+                    <tr class="el-table-row">
+                        <td class="el-table-cell"><span class="el-tier-name">Starter</span></td>
+                        <td class="el-table-cell"><span class="el-price-value">$5</span></td>
+                        <td class="el-table-cell"><span class="el-chars-count">30.000</span></td>
+                        <td class="el-table-cell"><span class="el-feature-list">Licença comercial, 10 vozes, Instant Voice Cloning.</span></td>
+                    </tr>
+                    <tr class="el-table-row">
+                        <td class="el-table-cell"><span class="el-tier-name" id="escolhido">Creator</span></td>
+                        <td class="el-table-cell"><span class="el-price-value">$22</span></td>
+                        <td class="el-table-cell"><span class="el-chars-count">100.000</span></td>
+                        <td class="el-table-cell"><span class="el-feature-list">Professional Voice Cloning, áudio em 44.1kHz.</span></td>
+                    </tr>
+                    <tr class="el-table-row">
+                        <td class="el-table-cell"><span class="el-tier-name">Pro</span></td>
+                        <td class="el-table-cell"><span class="el-price-value">$99</span></td>
+                        <td class="el-table-cell"><span class="el-chars-count">500.000</span></td>
+                        <td class="el-table-cell"><span class="el-feature-list">Suporte prioritário e painel de análise de uso.</span></td>
+                    </tr>
+                    <tr class="el-table-row">
+                        <td class="el-table-cell"><span class="el-tier-name">Scale</span></td>
+                        <td class="el-table-cell"><span class="el-price-value">$330</span></td>
+                        <td class="el-table-cell"><span class="el-chars-count">2.000.000</span></td>
+                        <td class="el-table-cell"><span class="el-feature-list">Volume massivo e suporte para grandes publicadoras.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Resumo: </p>
+            <ul>
+                <li>Plano escolhido: Creator</li>
+                <li>Valor: R$113</li>
+            </ul>
+            <h2>3- IA que faz videos ou parte grafica do video (sora)</h2>
+            <p>Ainda não há uma tabela de preços enquanto estou escrevendo essas linhas, olhar preço da API: </p>
+            <h2>4- Roteiro ChatGPT</h2>
+            <table cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Entrada (por 1M tokens)</th>
+                        <th>Saída (por 1M tokens)</th>
+                        <th>Entrada em cache (por 1M tokens)</th>
+                        <th>Observações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                        <td>GPT-5.2 (padrão)</td>
+                        <td>US$ 1,75</td>
+                        <td>US$ 14,00</td>
+                        <td>US$ 0,175</td>
+                        <td>Modelo principal, bom custo-benefício</td>
+                        </tr>
+                        <tr>
+                        <td>GPT-5.2 Pro</td>
+                        <td>US$ 21,00</td>
+                        <td>US$ 168,00</td>
+                        <td>US$ 2,10</td>
+                        <td>Versão avançada com mais precisão</td>
+                        </tr>
+                </tbody>
+            </table>
+            <p>Resumo: </p>
+                <ul>
+                    <li>Modelo escolhido: GPT: 5.2 (Padrão)</li>
+                    <li>Valor: R$70</li>
+                </ul>
+            <h2>5- IA para gerar thumbnail</h2>
+            <p>Usar api do chatgpt, acima</p>
+        
+        <h1>Resumo dos custos: </h1>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th class="th">Serviço</th>
+                        <th class="th">Custos</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td class="td">Hostinger - n8n</td>
+                        <td class="td">R$54.99</td>
+                    </tr>
+
+                    <tr>
+                        <td class="td">Elevenlabs</td>
+                        <td class="td">R$113 ou 56 no primeiro mes</td>
+                    </tr>
+                    <tr>
+                        <td class="td">Kling IA </td>
+                        <td class="td">R$0.7 por segundo de video</td>
+                    </tr>
+                    <tr>
+                        <td class="td">Chagpt</td>
+                        <td class="td">R$0.57 prompt + R$70 output</td>
+                    </tr>
+
+
+                </tbody>
+
+                <tfoot class="tfoot">
+                    <th class="th-foot" scope="row">Custo Total</th>
+                    <td class="td-foot" scope="row"><strong>R$239,57</strong> aproximados (tentar usar tecnicas para o video ficar mais barato, sem contar IA - video)</td>
+
+                </tfoot>
+
+
+            </table>
+
+
+
+        
+        
+        </article>
+    </main>
+
+
+    <p><strong>Custo inicial aproximadmente 238.57</strong>, mais o video e tentar fazer uma estrateginha para economizar</p>
+
+
+
+
+</body>
+</html>
