@@ -5,6 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A ESTRATÉGIA</title>
     <link rel="stylesheet" href="../../estilos/style1.css">
+    <style>
+        @charset "UTF-8";
+
+        body {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+
+        /* RESET */
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        /* BODY */
+
+        body{
+            background: #0f172a;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height:1.6;
+            color:#e5e7eb;
+            padding:40px;
+            display:flex;
+            justify-content:center;
+        }
+
+        /* CONTAINER PRINCIPAL */
+
+        body > *{
+            max-width:900px;
+        }
+
+        /* TITULO PRINCIPAL */
+
+        h1{
+            font-size:2.3em;
+            margin-bottom:30px;
+            color:#38bdf8;
+            border-bottom:2px solid #38bdf8;
+            padding-bottom:10px;
+        }
+
+        /* SUBTITULOS */
+
+        h2{
+            margin-top:40px;
+            margin-bottom:10px;
+            color:#22c55e;
+        }
+
+        h3{
+            margin-top:30px;
+            margin-bottom:10px;
+            color:#facc15;
+        }
+
+        /* PARAGRAFOS */
+
+        p{
+            margin-bottom:15px;
+        }
+
+        /* LISTAS */
+
+        ul,ol{
+            margin-left:30px;
+            margin-bottom:20px;
+        }
+
+        li{
+            margin:6px 0;
+        }
+
+        /* TABELA */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+            margin-bottom:30px;
+            background:#1e293b;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        /* CABEÇALHO */
+
+        thead{
+            background:#334155;
+        }
+
+        th{
+            padding:12px;
+            text-align:left;
+        }
+
+        /* CELULAS */
+
+        td{
+            padding:12px;
+            border-top:1px solid #475569;
+        }
+
+        /* LINHAS ALTERNADAS */
+
+        tbody tr:nth-child(even){
+            background:#0f172a;
+        }
+
+        /* HOVER */
+
+        tbody tr:hover{
+            background:#1e40af;
+        }
+
+        #iframe {
+            background-color: #ffffff;
+
+        }
+
+        article > ol > li > a {
+            color: #ffffff;
+            font-weight: 900;
+            text-decoration: underline;
+
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width:700px){
+
+            body{
+                padding:20px;
+            }
+
+            h1{
+                font-size:1.7em;
+            }
+
+            table{
+                font-size:0.9em;
+            }
+
+
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -52,13 +201,16 @@
             <h2>3 - Conhecimentos necessarios e custo inicial do projeto</h2>
             <p>Logo abaixo representarei em uma tela os seguintes conceitos, na lista abaixo falo os conceitos que terão na tela: </p>
             <ol type="I">
-                <li><a  class="pontos_estrategicos" href="paginas_do_projeto_1/tabela.html" target="screen">Conhecimentos necessarios</a></li>
+                <li>
+                <a  class="pontos_estrategicos" href="paginas_do_projeto_1/tabela.html" target="screen">Conhecimentos necessarios</a></li>
                 <li><a class="pontos_estrategicos" href="paginas_do_projeto_1/custo_inicial.html" target="screen">Custo inicial</a></li>
                 <li><a class="pontos_estrategicos" href="paginas_do_projeto_1/receita.html" target="screen">Receita esperada e metas de lucro e o que e necessario para bater a meta</a></li>
             </ol>
 
 
-            <iframe src="paginas_do_projeto_1/tela_inicial.html" frameborder="0" width="660px" height="500px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" name="screen"></iframe>
+            <div id="iframe">
+                <iframe src="paginas_do_projeto_1/tela_inicial.html" frameborder="0" width="100%" height="500px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" name="screen"></iframe>
+            </div>
 
             </iframe>
 
